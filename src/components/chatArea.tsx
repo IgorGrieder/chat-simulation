@@ -17,7 +17,7 @@ const ChatArea = ({ userName }: Props) => {
   })
 
   return (
-    <div className="flex w-full flex-col">
+    <div className="flex w-full flex-col overflow-y-scroll bg-scroll">
       {displayHistory}
     </div>
   )

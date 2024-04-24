@@ -29,6 +29,12 @@ const ChatInputPerson = ({ userName }: Props) => {
         },
       })
       setInput("") // limpando area de input
+
+      // lidando com focus apos enviar dados
+      const inputHTML = (event.currentTarget as HTMLFormElement).querySelector("input")
+      if (inputHTML) {
+        inputHTML.blur(); // limpando focus
+      }
     }
   }
 
