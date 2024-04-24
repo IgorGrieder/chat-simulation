@@ -43,7 +43,7 @@ const ChatInputPerson = ({ userName }: Props) => {
       <input
         type="text"
         className="w-full bg-transparent text-gray-900 outline-none"
-        placeholder={`${userName}, digite sua mensagem e tecle enter`}
+        placeholder={window.innerWidth > 400 ? (`${userName}, digite sua mensagem e tecle enter`) : (`${userName}, digite`)}
         value={input}
         onChange={(event) => { setInput(event.target.value) }}
       />

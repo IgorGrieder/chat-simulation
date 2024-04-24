@@ -16,7 +16,7 @@ const StartChat = ({ userName, setUserName, showChat }: Props) => {
   }
   
   return (
-    <div className="flex items-center gap-4">
+    <div className="flex flex-col items-center gap-4 sm:flex-row">
       <input 
         type="text"
         className="rounded-sm border border-white bg-transparent px-5 py-2 font-light outline-none" 

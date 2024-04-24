@@ -39,7 +39,7 @@ const ChatInputBot = () => {
       <input
         type="text"
         className="w-full bg-transparent text-gray-900 outline-none"
-        placeholder="Bot, digite sua mensagem e tecle enter"
+        placeholder={window.innerWidth > 400 ? (`Bot, digite sua mensagem e tecle enter`) : (`Bot, digite`)}
         value={input}
         onChange={(event) => { setInput(event.target.value) }}
       />
