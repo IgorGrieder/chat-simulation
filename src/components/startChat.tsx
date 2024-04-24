@@ -4,10 +4,14 @@ type Props = {
   showChat: () => void
 }
 
+const STORAGE_NAME = "nameUser"
+
 const StartChat = ({ userName, setUserName, showChat }: Props) => {
+
   const handleAdd = () => {
     if (userName !== '') {
       showChat()
+      localStorage.setItem(STORAGE_NAME, JSON.stringify(userName))
     }
   }
   

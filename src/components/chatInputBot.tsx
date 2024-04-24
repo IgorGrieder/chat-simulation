@@ -7,12 +7,19 @@ const ChatInputBot = () => {
 
   const handleSubmit = (event: any) => {
     event.preventDefault() // previnir de atualizar a pagina
+
+    // setando o tempo atual da mensagem
+    const timeNow = new Date()
+    const min = timeNow.getMinutes().toString().padStart(2, '0') // certificando que terao dois digitos sendo exibidos
+    const hours = timeNow.getHours().toString().padStart(2, '0')
+
     if (input !== '') { // checando se o input esta vazio para enviar uma mensagem
       chatCtx?.dispatch({ // adicionando no reducer
         type: 'add',
         payload: {
           sentBy: 'bot',
-          body: input
+          body: input,
+          time: `${hours}:${min}`
         }
       })
     setInput('') // limpando area de input

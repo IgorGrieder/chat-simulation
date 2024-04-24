@@ -2,11 +2,20 @@
 
 import StartChat from "@/components/startChat"
 import ChatBox from "@/components/chatBox"
-import { useState } from "react"
+import { useEffect, useState } from "react"
+
+const STORAGE_NAME = "nameUser"
 
 export default function Home() {
   const [userName, setUserName] = useState('')
   const [showChatBox, setShowChatBox] = useState(false)
+
+  useEffect(() => {
+    if (localStorage.getItem(STORAGE_NAME) !== null) {
+      setShowChatBox(true)
+      setUserName(JSON.parse(localStorage.getItem(STORAGE_NAME) ?? ''))
+    }
+  },[])
 
   const handleShowChat = () => {
     setShowChatBox(true)
