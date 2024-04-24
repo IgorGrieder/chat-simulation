@@ -10,7 +10,6 @@ export default function Home() {
 
   const handleShowChat = () => {
     setShowChatBox(true)
-    setUserName('')
   }
 
   return (

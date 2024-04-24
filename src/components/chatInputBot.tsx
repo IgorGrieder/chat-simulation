@@ -7,7 +7,7 @@ const ChatInputBot = () => {
         placeholder="Bot, digite sua mensagem e tecle enter"
       />
     </form>
-  );
+  )
 }
 
 export default ChatInputBot
